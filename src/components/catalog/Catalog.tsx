@@ -26,7 +26,8 @@ function Catalog() {
   useEffect(() => {
     const getData = async () => {
       const data = await fetch(
-        `https://online-shop-next-server-pcmt847ny-omarn01s-projects.vercel.app/${category}`
+        `https://online-shop-next-server-pcmt847ny-omarn01s-projects.vercel.app/${category}`,
+        { mode: 'no-cors' }
       ).then(res => res.json())
 
       setData(data.data)
