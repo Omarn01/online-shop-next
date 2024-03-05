@@ -27,7 +27,7 @@ function Category() {
   useEffect(() => {
     const getData = async () => {
       const data = await fetch(
-        `https://${process.env.DOMAIN}/${category}`
+        `https://online-shop-next-server-pcmt847ny-omarn01s-projects.vercel.app/${category}`
       ).then(res => res.json())
 
       setData(data.data)

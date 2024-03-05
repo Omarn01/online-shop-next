@@ -25,7 +25,7 @@ export default function Page() {
   useEffect(() => {
     const getData = async () => {
       const data = await fetch(
-        `https://${process.env.DOMAIN}/electricHobs`
+        `https://online-shop-next-server-pcmt847ny-omarn01s-projects.vercel.app/electricHobs`
       ).then(res => res.json())
 
       setData(data.data.find(({ id }: any) => id == category))
