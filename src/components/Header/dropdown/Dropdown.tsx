@@ -15,7 +15,7 @@ export default function Dropdown() {
   const [catalog, setCatalog] = useState([])
 
   const getData = useCallback(async () => {
-    const res = await fetch('http://localhost:3001/catalog').then(res =>
+    const res = await fetch(`https://${process.env.DOMAIN}/catalog`).then(res =>
       res.json()
     )
 

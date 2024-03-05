@@ -25,9 +25,9 @@ function Catalog() {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await fetch(`http://localhost:3001/${category}`).then(res =>
-        res.json()
-      )
+      const data = await fetch(
+        `https://${process.env.DOMAIN}/${category}`
+      ).then(res => res.json())
 
       setData(data.data)
       setTitle(data.title)
