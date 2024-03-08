@@ -15,9 +15,9 @@ export default function Dropdown() {
   const [catalog, setCatalog] = useState([])
 
   const getData = useCallback(async () => {
-    const res = await fetch(
-      `https://online-shop-next-server-pcmt847ny-omarn01s-projects.vercel.app/catalog`
-    ).then(res => res.json())
+    const res = await fetch(`http://localhost:3001/catalog`).then(res =>
+      res.json()
+    )
 
     return setCatalog(res)
   }, [])

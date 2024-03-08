@@ -1,0 +1,103 @@
+.slider
+    display: flex
+    user-select: none
+    width: 100%
+    height: 300px
+    align-items: center
+    position: relative
+    border-bottom: 1px solid gray
+    border-radius: 10px
+   
+    &_wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        height: 100%
+        overflow-x: scroll
+        overflow-y: hidden 
+
+.wrapper
+    display: flex
+    flex-wrap: wrap
+    gap: 50px
+
+.card
+    width: 300px
+    padding: 5px 10px
+    border-radius: 10px
+    box-shadow: 1px 1px 5px 0px gray
+
+.compare
+    display: flex
+    align-items: center
+    gap: 5px
+.stat
+    border-bottom: 1px solid gray
+    padding: 5px 0
+.content
+    margin-top: 20px
+.buttons
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 5px 0
+
+
+.favorite, .buy
+    border-radius: 5px
+    width: 40px
+    height: 40px
+    border: 1px solid gray
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: .2s ease-in-out
+    &:hover
+        background-color: green
+        svg
+            transition: .2s ease-in-out
+
+            color: #fff
+
+        
+.title
+    border-bottom: 1px solid gray  
+    padding: 0 0 10px
+    font-weight: 600
+    font-size: 17px
+
+.prev, .next
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    position: absolute
+    svg
+        width: 100%
+        height: 100%
+        transition: .2s 
+        cursor: pointer
+        &:hover
+            transform: scale(1.15)    
+.prev
+    top: 50%
+    left: 0px
+.next
+
+    top: 50%
+    right: 0px
+
+.slide
+    // display: flex
+    padding: 10px
+    min-width: 100%
+    min-height: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+        height: 250px
+        width: auto
+    
+       

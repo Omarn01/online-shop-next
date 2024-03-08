@@ -6,11 +6,11 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { IoIosArrowForward } from 'react-icons/io'
 import CategoryItem from '../categoryItem/CategoryItem'
-import Card from '../card/Card'
+import Card from '../slider/Card'
 
 interface ICategory {
   id: number
-  img: string
+  img: Array<string>
   url: string
   title: string
   price: number
@@ -26,9 +26,9 @@ function Category() {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await fetch(
-        `https://online-shop-next-server-pcmt847ny-omarn01s-projects.vercel.app/${category}`
-      ).then(res => res.json())
+      const data = await fetch(`http://localhost:3001/${category}`).then(res =>
+        res.json()
+      )
 
       setData(data.data)
       setBreadcrumbs(data.breadcrumbs)
@@ -38,7 +38,11 @@ function Category() {
     getData()
   }, [])
 
-  console.log(data, breadcrumbs)
+  const toString = (num: number) => {
+    return String(num).split('').pop()
+  }
+
+  console.log(data)
 
   return (
     <div className={`${style.category} container`}>
@@ -71,12 +75,19 @@ function Category() {
         )}
       </div>
       <h1 className={style.title}>
-        {title} {data.length} товаров
+        {title} {data.length} {data.length} товаров
       </h1>
       <div className={style.catalogItem}>
         {!!data.length ? (
           data.map(({ id, img, url, title, price }: ICategory) => (
-            <Card key={id} img={img} url={url} title={title} price={price} />
+            <Card
+              key={id}
+              id={id}
+              img={img}
+              url={url}
+              title={title}
+              price={price}
+            />
           ))
         ) : (
           <h1>Loading...</h1>

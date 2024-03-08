@@ -7,6 +7,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -24,8 +27,12 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
   color: #333;
-  background-color: #f6f6f6;
+  background-color: #eeeeee;
 }
 
 @layer utilities {
