@@ -75,7 +75,7 @@ function Category() {
         )}
       </div>
       <h1 className={style.title}>
-        {title} {data.length} {data.length} товаров
+        {title} {data.length} товаров
       </h1>
       <div className={style.catalogItem}>
         {!!data.length ? (

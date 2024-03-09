@@ -6,6 +6,7 @@ interface IMain {
   title: string
   preview: Array<string>
   bigImg: Array<string>
+  companyImg: string
   subtitle: string
   count: number
   price: number
@@ -17,6 +18,7 @@ function Main({
   title,
   preview,
   bigImg,
+  companyImg,
   subtitle,
   count,
   price,
@@ -30,7 +32,7 @@ function Main({
         <div className={style.img}>
           <div className={style.preview}>
             {preview.map((img: string, i: number) => (
-              <img onClick={() => setSlide(i)} src={img} />
+              <img key={i} onClick={() => setSlide(i)} src={img} />
             ))}
           </div>
           <div className={style.image}>
@@ -40,10 +42,9 @@ function Main({
         <div className={style.info}>
           <div className={style.infoTop}>
             <h2>{subtitle}</h2>
-            <img
-              src='https://c.dns-shop.ru/thumb/st4/fit_width/110/110/bd6b1443789bc340cb938f3864afc465/97252067c06a393acd28c636b743004fab8398416a01214731e8a7f62307b4ea.png'
-              alt=''
-            />
+            <div className={style.companyImage}>
+              <img src={companyImg} alt='' />
+            </div>
           </div>
           <div className={style.info_stat}>
             <div>

@@ -1,0 +1,72 @@
+.review 
+    display: flex
+    flex-direction: column
+    padding: 15px 10px
+    border-radius: 10px
+    border-bottom: 1px solid #d9d9d9
+
+.header
+    display: flex
+    flex-direction: column
+
+    &_top
+        &_title
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &_rating
+            display: flex
+            align-items: center
+            gap: 10px
+    &_bottom
+        margin: 10px 0
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+
+
+.profile
+    display: flex
+    align-items: center
+    gap: 10px
+    &_avatar
+        background-color: black
+        width: 30px
+        height: 30px
+        border-radius: 50%
+    &_name
+        font-size: 16px
+        color: #0d61af
+        cursor: pointer
+    &_real
+        display: flex
+        align-items: center
+        gap: 5px
+        border-radius: 8px
+        box-shadow: 0 1px 4px #c4c4c4
+        color: #4caf50
+        cursor: pointer
+        padding: 7px 8px
+        font-size: 14px
+
+.date
+    display: flex
+    flex-direction: column
+    color: gray
+    font-size: 14px
+    font-weight: 500
+
+.product, .termUse
+    font-size: 16px
+    span
+        font-weight: 400
+        font-size: 16px
+
+.dignity, .flaws, .comment
+    font-size: 18px
+    margin: 10px 0
+    p
+        font-weight: 400
+        font-size: 16px
+        margin: 5px 0
