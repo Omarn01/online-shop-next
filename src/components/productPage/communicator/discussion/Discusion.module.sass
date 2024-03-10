@@ -1,0 +1,56 @@
+.discussion
+    display: flex
+    flex-direction: column
+    gap: 10px
+    border-bottom: 1px solid #ddd
+    border-radius: 5px
+    padding-bottom: 10px
+    &_head
+        display: flex
+        flex-direction: column
+    &_title
+        font-size: 22px
+        font-weight: 600
+    &_info
+        display: flex
+        align-items: center
+        gap: 50px
+        font-size: 16px
+        font-weight: 400
+    &_user
+        dispal: flex
+        align-items: center
+    &_text
+        font-size: 17px
+        font-weight: 500
+
+.controlState
+    display: flex
+    align-items: center
+    width: 40%
+    justify-content: space-between
+    font-size: 16px
+    font-weight: 500
+    &_rate
+        display: flex
+        gap: 10px
+        align-items: center
+        svg
+            width: 25px
+            height: 25px
+            cursor: pointer
+            align-items: center
+            justify-content: center
+            background-color: #f7f7f7
+            border-radius: 5px
+    &_views
+        display: flex
+        align-items: center
+        gap: 5px
+    &_comments
+        display: flex
+        align-items: center
+        gap: 5px
+        cursor: pointer
+    &_bookmark
+        cursor: pointer

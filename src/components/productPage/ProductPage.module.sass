@@ -5,14 +5,24 @@
     margin-top: 50px
 
 .left
-    width: 25%
+    width: 28%
     display: flex
     flex-direction: column
-    gap: 20px
-    padding: 15px 10px
     border-radius: 10px
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.16)
     background-color: #fdfdfd
+.tabs
+    display: flex
+    flex-direction: column
+    gap: 10px
+    padding: 0
+
+.tab
+    padding: 10px
+    width: 100%
+    &_active
+        border-left: 3px solid green
+
 .right
     display: flex
     flex-direction: column
@@ -29,7 +39,11 @@
     border-radius: 10px
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.16)
     background-color: #fdfdfd
-
+.instructionsAndFiles
+    padding: 15px 10px
+    border-radius: 10px
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.16)
+    background-color: #fdfdfd
 .characteristics
     display: flex
     flex-direction: column
@@ -41,10 +55,30 @@
     border-radius: 10px
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.16)
     background-color: #fdfdfd
+    &_content
+        display: flex
+        flex-direction: column
+        gap: 20px
+        overflow: hidden
     &_title
         margin-bottom: 5px
         font-weight: 700
         font-size: 22px
+    &_all
+        cursor: pointer
+        padding: 5px 10px
+        border-radius: 5px
+        background: #fff
+        border: 1px solid #d9d9d9
+        &_button
+            display: flex
+            align-items: center
+            gap: 10px
+    &_howToChoose
+        cursor: pointer
+        display: flex
+        align-items: center
+        gap: 10px
     &_spec
         display: flex
         justify-content: space-between
@@ -60,6 +94,11 @@
         flex-direction: column
         &_title
             font-size: 18px
+    &_footer
+        display: flex
+        justify-content: space-between
+        font-size: 16px
+        color: gray
 
 .breadcrumbs
     display: flex

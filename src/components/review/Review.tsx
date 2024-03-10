@@ -1,8 +1,10 @@
 import style from './Review.module.sass'
 
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io'
+import { AiOutlineLike, AiOutlineDislike } from 'react-icons/ai'
 
 export interface IReview {
+  count: number
   id?: number
   title: string
   name: string
@@ -13,9 +15,15 @@ export interface IReview {
   dignity: string
   flaws: string
   comment: string
+  likes: number
+  mostPopular?: boolean
+
+  tabs: string
+  setTabs: Function
 }
 
 function Review({
+  count,
   title,
   name,
   real,
@@ -25,9 +33,15 @@ function Review({
   dignity,
   flaws,
   comment,
+  likes,
+  mostPopular,
+
+  tabs,
+  setTabs,
 }: IReview) {
   return (
     <div className={style.review}>
+      {/* {mostPopular && <h2>Самый популярный отзыв</h2>} */}
       <div className={style.header}>
         <div className={style.header_top}>
           <div className={style.header_top_title}>
@@ -71,6 +85,21 @@ function Review({
         <h3>Комментарий</h3>
         <p>{comment}</p>
       </div>
+      <div className={style.grade}>
+        <div className={style.like}>
+          <AiOutlineLike />
+          <div className={style.like_count}>+{likes}</div>
+        </div>
+        <div className={style.dislike}>
+          <AiOutlineDislike />
+          <div className={style.dislike_count}></div>
+        </div>
+      </div>
+      {tabs !== 'reviews' && (
+        <div onClick={() => setTabs('reviews')} className={style.all}>
+          Все отзывы {count}
+        </div>
+      )}
     </div>
   )
 }
